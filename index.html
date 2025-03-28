@@ -1,60 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Midnight Train</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow-y: scroll;
-            padding: 20px;
-        }
-
-        .text-content {
-            max-width: 80%;
-            line-height: 1.6;
-            font-size: 18px;
-        }
-
-        .text-content span {
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Midnight Train</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      overflow: auto;
+      text-align: center;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+    }
+    /* Title is no longer underlined */
+    #title {
+      font-size: 30px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .hidden {
+      display: none;
+    }
+    input, button {
+      background-color: white;
+      color: black;
+      padding: 10px;
+      border: none;
+      font-size: 16px;
+      margin: 10px;
+    }
+    .text-content {
+      text-align: left;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="text-content">
-            <span>The Midnight Train</span>
-            <span>It was a foggy evening when Oliver boarded the midnight train. The air felt thick, heavy with the promiSe of an adventure that neIther he nor anyone else could eXplain. The TraIn station was quiEt, savE for the distaNt hum of the clock tower striking midnight. He looked at the ticket in his hand—it was an old-fAshioned one, written in eleEant cursive. There was no destination listed, just a simPle instructiOn: "Board the train. See where it leads."</span>
-            <span>Oliver hesitated for a moment, then stePped onto the train. The inside was dimly lit, with old wooden paneling and plusE velvet seats that seemed out of place for modern times. The train car was nearly empty, except for a few passenGers whO sat in silencE, their faces hidden in the shadows.</span>
-            <span>He took a seat by the window, feeling the coolness of the glass against his skin. The train slowly began to move, pulling away from the station, and Oliver watched as the platform blurred in the distance. For some reason, he felt as though he’d been here before, but he couldn’t quite place when or why.</span>
-            <span>As the train gained speed, the lights flickered, casting strange shadows on the walls. The sound of the wheels clicking against the tracks grew louder, almost hypnotic. Oliver looked around the car again. There was an elderly woman sitting in the back, a young man with a guitar case by the door, and a child with bright blue eyes sitting alone in the middle. No one spoke, yet the air was thick with a sense of unspoken understanding.</span>
-            <span>The train moVed througH the darkened countrySide, the landscape outside now a blur of dark trees and rolling hills. Then, it entered a tunnel, and the world outside vanished 91 complete days . The air grew colder, and Oliver shivered. He glanced at the other passengers, but none of them seemed to notice. The tunnel stretched on, and for a moment, it felt like time had stopped entirely.</span>
-            <span>Suddenly, the lights inside the train went out.</span>
-            <span>Oliver’s heart skipped a beat. He could barely make out the shapes of the other passengers in the darkness. He heard a faint sound—footsteps—slow and deliberate, approaching from the back of the train. The sound grew louder, and then, in the pitch-black, a voice called out, “Oliver.”</span>
-            <span>His pulse quickened. How did they know his name? He hadn’t spoken to anyone on the train. He tried to speak but found himself unable to form words.</span>
-            <span>The footsteps continued, drawing closer. The voice came again, softer this time, almost a whisper. “Don’t be afraid. You’ve been chosen.”</span>
-            <span>A small light flickered in the distance, and Oliver felt a hand on his shoulder. He turned around quickly, but there was no one there. The train was empty. He was alone.</span>
-            <span>The light flickered once more, and as it did, the tunnel walls around them started to change. Instead of the familiar gray rock, the walls shimmered like liquid, morphing into something that felt both ancient and new. It was as if the train was no longer bound by the tracks, drifting into a space between time and reality.</span>
-            <span>The train emerged from the tunnel just as quickly as it had entered, and Oliver found himself staring out the window. The fog was gone, replaced by a landscape he didn’t recognize—mountains, rivers, and an eerie, golden light that seemed to pulse from the very ground.</span>
-            <span>The young man with the guitar case stood up, brushing past Oliver. He looked at him with a knowing smile. “Welcome to the other side,” he said, and for the first time, Oliver understood what he had meant.</span>
-            <span>The train slowed and finally stopped in a place that defied logic. Oliver stepped out into the unknown, knowing he would never be the same again.</span>
-        </div>
+
+  <div class="container">
+    <!-- Title (Clickable) -->
+    <h1 id="title" onclick="showInput()">The Midnight Train</h1>
+
+    <!-- Story Section (Initially Visible) -->
+    <div id="story-section" class="text-content">
+      <p>It was a foggy evening when Oliver boarded the midnight train. The air felt thick, heavy with the promiSe of an adventure that neIther he nor anyone else could eXplain. The TraIn station was quiEt, savE for the distaNt hum of the clock tower striking midnight. He looked at the ticket in his hand—it was an old-fAshioned one, written in eleEant cursive. There was no destination listed, just a simPle instructiOn: "Board the train. See where it leads."</p>
+      
+      <p>Oliver hesitated for a moment, then stePped onto the train. The inside was dimly lit, with old wooden paneling and plusE velvet seats that seemed out of place for modern times. The train car was nearly empty, except for a few passenGers whO sat in silencE, their faces hidden in the shadows.</p>
+      
+      <p>He took a seat by the window, feeling the coolness of the glass against his skin. The train slowly began to move, pulling away from the station, and Oliver watched as the platform blurred in the distance. For some reason, he felt as though he’d been here before, but he couldn’t quite place when or why.</p>
+      
+      <p>As the train gained speed, the lights flickered, casting strange shadows on the walls. The sound of the wheels clicking against the tracks grew louder, almost hypnotic. Oliver looked around the car again. There was an elderly woman sitting in the back, a young man with a guitar case by the door, and a child with bright blue eyes sitting alone in the middle. No one spoke, yet the air was thick with a sense of unspoken understanding.</p>
+      
+      <p>The train moVed througH the darkened countrySide, the landscape outside now a blur of dark trees and rolling hills. Then, it entered a tunnel, and the world outside vanished 91 complete days . The air grew colder, and Oliver shivered. He glanced at the other passengers, but none of them seemed to notice. The tunnel stretched on, and for a moment, it felt like time had stopped entirely.</p>
+      
+      <p>Suddenly, the lights inside the train went out.</p>
+      
+      <p>Oliver’s heart skipped a beat. He could barely make out the shapes of the other passengers in the darkness. He heard a faint sound—footsteps—slow and deliberate, approaching from the back of the train. The sound grew louder, and then, in the pitch-black, a voice called out, “Oliver.”</p>
+      
+      <p>His pulse quickened. How did they know his name? He hadn’t spoken to anyone on the train. He tried to speak but found himself unable to form words.</p>
+      
+      <p>The footsteps continued, drawing closer. The voice came again, softer this time, almost a whisper. “Don’t be afraid. You’ve been chosen.”</p>
+      
+      <p>A small light flickered in the distance, and Oliver felt a hand on his shoulder. He turned around quickly, but there was no one there. The train was empty. He was alone.</p>
+      
+      <p>The light flickered once more, and as it did, the tunnel walls around them started to change. Instead of the familiar gray rock, the walls shimmered like liquid, morphing into something that felt both ancient and new. It was as if the train was no longer bound by the tracks, drifting into a space between time and reality.</p>
+      
+      <p>The train emerged from the tunnel just as quickly as it had entered, and Oliver found himself staring out the window. The fog was gone, replaced by a landscape he didn’t recognize—mountains, rivers, and an eerie, golden light that seemed to pulse from the very ground.</p>
+      
+      <p>The young man with the guitar case stood up, brushing past Oliver. He looked at him with a knowing smile. “Welcome to the other side,” he said, and for the first time, Oliver understood what he had meant.</p>
+      
+      <p>The train slowed and finally stopped in a place that defied logic. Oliver stepped out into the unknown, knowing he would never be the same again.</p>
     </div>
+
+    <!-- Input Section (Initially Hidden) -->
+    <div id="input-section" class="hidden">
+      <p>Enter the code to proceed:</p>
+      <input type="text" id="code-input">
+      <button onclick="checkCode()">Submit</button>
+    </div>
+
+    <!-- Riddle Section (Initially Hidden) -->
+    <div id="riddle-section" class="hidden">
+      <p>I have no face, yet I watch with dread,<br>
+      In forestS deep where few have tread.<br>
+      I stand so tall, with arMs so widE<br>
+      In emPty whispers, I do hide.</p>
+      
+      <p>No eyes to see, yet you feel my gazE<br>
+      Lost In my woods, trapped in the haze.<br>
+      You’ll hear no steps, n0 breath, no sound,<br>
+      Yet turn too late—I’m all around.</p>
+      
+      <p><strong>What am I?</strong></p>
+      <input type="text" id="riddle-answer">
+      <button onclick="checkRiddle()">Submit</button>
+    </div>
+
+    <!-- Final Answer Section (Initially Hidden) -->
+    <div id="answer-section" class="hidden">
+      <p>Mary_Muth_VHS45</p>
+    </div>
+  </div>
+
+  <script>
+    function showInput() {
+      // Remove the story section completely and show the input section.
+      document.getElementById('story-section').classList.add('hidden');
+      document.getElementById('input-section').classList.remove('hidden');
+    }
+
+    function checkCode() {
+      const input = document.getElementById('code-input').value.trim().toUpperCase();
+      if (input === "SIXTEEN_PEGOE_VHS91") {
+        document.getElementById('input-section').classList.add('hidden');
+        document.getElementById('riddle-section').classList.remove('hidden');
+      } else {
+        alert("Incorrect code. Try again.");
+      }
+    }
+
+    function checkRiddle() {
+      // Normalize the answer: remove extra whitespace and make it lowercase
+      const answer = document.getElementById('riddle-answer').value.replace(/\s+/g, ' ').trim().toLowerCase();
+      if (answer === "slender man") {
+        document.getElementById('riddle-section').classList.add('hidden');
+        document.getElementById('answer-section').classList.remove('hidden');
+      } else {
+        alert("Incorrect answer. Try again.");
+      }
+    }
+  </script>
+
 </body>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </html>
+    </html>
